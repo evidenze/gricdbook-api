@@ -8,6 +8,13 @@ A RESTful APIs for books using Node.js, Express, and Mongoose.
 ## Live Frontend URL
 [https://gricdbook-web-9h964.ondigitalocean.app](https://gricdbook-web-9h964.ondigitalocean.app)
 
+---
+**NOTE**
+
+Images are deleted from the server automatically after 5 minutes. This is because of the sandbox database being used for this test.
+
+---
+
 ## How to install
 
 Clone the repo:
