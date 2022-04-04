@@ -28,6 +28,8 @@ cp .env.example .env
 
 ## Assumptions
 
+An admin sign up and sign in feature has been added for uploading books.
+
 ## Table of Contents
 
 - [Commands](#commands)

@@ -9,7 +9,7 @@ const router = express.Router();
 router
     .route('/')
     .post(auth('manageBooks'), validate(bookValidation.createBook), bookController.createBook)
-    .get(auth('getBooks'), validate(bookValidation.getBooks), bookController.getBooks);
+    .get(validate(bookValidation.getBooks), bookController.getBooks);
 
 router
     .route('/:bookId')
