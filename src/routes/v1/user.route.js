@@ -17,9 +17,7 @@ router
     .patch(auth('manageUsers'), validate(userValidation.updateUser), userController.updateUser)
     .delete(auth('manageUsers'), validate(userValidation.deleteUser), userController.deleteUser);
 
-router
-    .route('/single')
-    .get(auth(), userController.getAuthenticatedUser);
+router.get('/user/user', auth(), userController.getAuthenticatedUser);
 
 module.exports = router;
 

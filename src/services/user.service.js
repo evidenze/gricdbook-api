@@ -38,7 +38,7 @@ const getUserById = async(id) => {
 };
 
 const getAuthenticatedUser = async(id) => {
-    return User.findOne({ id });
+    return User.findById(id);
 }
 
 /**

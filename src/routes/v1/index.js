@@ -4,6 +4,8 @@ const userRoute = require('./user.route');
 const docsRoute = require('./docs.route');
 const bookRoute = require('./book.route');
 const config = require('../../config/config');
+const auth = require('../../middlewares/auth');
+const userController = require('../../controllers/user.controller');
 
 const router = express.Router();
 
@@ -20,6 +22,8 @@ const defaultRoutes = [{
         route: bookRoute,
     },
 ];
+
+router.get('/user', auth(), userController.getAuthenticatedUser);
 
 const devRoutes = [
     // routes available only in development mode
