@@ -24,6 +24,9 @@ const defaultRoutes = [{
 ];
 
 router.get('/user', auth(), userController.getAuthenticatedUser);
+router.get('/', function(req, res, next) {
+    res.send('Gricdbooks API');
+})
 
 const devRoutes = [
     // routes available only in development mode
