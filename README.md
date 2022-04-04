@@ -8,8 +8,7 @@ Clone the repo:
 
 ```bash
 git clone https://github.com/evidenze/gricdbook-api.git
-cd gricd-book
-npx rimraf ./.git
+cd gricdbook-api
 ```
 
 Install the dependencies:

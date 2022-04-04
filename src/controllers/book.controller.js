@@ -14,7 +14,7 @@ const createBook = catchAsync(async(req, res) => {
     photo.mv('./uploads/' + name);
 
     var obj = {
-        image: 'uploads/' + name,
+        image: name,
         title: req.body.title,
         isbn: req.body.isbn,
         published: req.body.published,
@@ -35,7 +35,7 @@ const createBook = catchAsync(async(req, res) => {
 const getBooks = catchAsync(async(req, res) => {
     const filter = pick(req.query, ['title']);
     const options = pick(req.query, ['sortBy', 'limit', 'page']);
-    const result = await bookService.queryBooks(filter, options);
+    const result = await bookService.queryBooks(filter, { limit: 20, sortBy: 'createdAt:desc' });
     res.send({
         status: true,
         message: 'Books fetched successfully',
