@@ -34,14 +34,13 @@ const updateBook = {
     }),
     body: Joi.object()
         .keys({
-            title: Joi.string().required(),
-            isbn: Joi.string().required(),
-            published: Joi.number().required(),
-            publisher: Joi.string().required(),
-            description: Joi.string().required(),
-            author: Joi.string().required(),
-            category: Joi.string().required(),
-            image: Joi.required()
+            title: Joi.string(),
+            isbn: Joi.string(),
+            published: Joi.number(),
+            publisher: Joi.string(),
+            description: Joi.string(),
+            author: Joi.string(),
+            category: Joi.string(),
         })
         .min(1),
 };
